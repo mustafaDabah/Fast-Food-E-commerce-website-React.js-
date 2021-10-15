@@ -60,51 +60,51 @@ function Navbar() {
         <>
           <AppBar className={classes.root}>
               <Toolbar className={classes.container}>
-                <ListItem className={!openNavbar ? classes.listItemClose : classes.listItemOpen}>
-                 {navbarLinks.map((item , index) => (
-                   <Button key={index} className={classes.linkItems} onClick={() => goTo(item.path)}>{item.name}</Button>
-                 ))}
-                </ListItem>
+                  <ListItem className={!openNavbar ? classes.listItemClose : classes.listItemOpen}>
+                  {navbarLinks.map((item , index) => (
+                    <Button key={index} className={classes.linkItems} onClick={() => goTo(item.path)}>{item.name}</Button>
+                  ))}
+                  </ListItem>
+                  
+                  <Logo/>
                 
-                <Logo/>
-              
-                <Box display='flex' justifyContent='center' alignItems='center'>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    edge="start"
-                    onClick={handleNavbar}
-                    className={classes.menuButton}
-                    >
-                      <MenuIcon />
-                  </IconButton>
-                  {/* ---is user or not --- */}
-                  {user?.email ? (
-                    <IconButton onClick={logout}>
+                  <Box display='flex' justifyContent='center' alignItems='center'>
+                    <IconButton
+                      color="inherit"
+                      aria-label="open drawer"
+                      edge="start"
+                      onClick={handleNavbar}
+                      className={classes.menuButton}
+                      >
+                        <MenuIcon />
+                    </IconButton>
+                    {/* ---is user or not --- */}
+                    {user?.email ? (
+                      <IconButton onClick={logout}>
+                          <Typography component={Link}  to={LOGIN_PATH} className={classes.favorite}>
+                              <ExitToAppOutlinedIcon/>
+                          </Typography>
+                      </IconButton>
+                    ) : (
+                      <IconButton>
                         <Typography component={Link}  to={LOGIN_PATH} className={classes.favorite}>
-                            <ExitToAppOutlinedIcon/>
+                            <PermIdentityOutlinedIcon/>
                         </Typography>
-                     </IconButton>
-                  ) : (
+                      </IconButton>
+                    )}
                     <IconButton>
-                      <Typography component={Link}  to={LOGIN_PATH} className={classes.favorite}>
-                          <PermIdentityOutlinedIcon/>
+                      <Typography component={Link}  to={OUR_PRODUCTS_PATH} className={classes.favorite}>
+                          <SearchOutlinedIcon/>
                       </Typography>
                     </IconButton>
-                  )}
-                  <IconButton>
-                    <Typography component={Link}  to={OUR_PRODUCTS_PATH} className={classes.favorite}>
-                        <SearchOutlinedIcon/>
-                    </Typography>
-                  </IconButton>
-                  <IconButton>
-                    <Typography component={Link}  to={SHOPPING_CART_PATH} className={classes.favorite}>
-                        <Badge badgeContent={numberOfProductCart} color="secondary">
-                          <ShoppingCartOutlinedIcon/>
-                        </Badge>
-                    </Typography>
-                  </IconButton>
-                </Box>
+                    <IconButton>
+                      <Typography component={Link}  to={SHOPPING_CART_PATH} className={classes.favorite}>
+                          <Badge badgeContent={numberOfProductCart} color="secondary">
+                            <ShoppingCartOutlinedIcon/>
+                          </Badge>
+                      </Typography>
+                    </IconButton>
+                  </Box>
               </Toolbar>
           </AppBar>
         </>

@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
           color:theme.palette.secondary.main
         },
         '& h4':{
-          fontSize:theme.spacing(4),
+          fontSize:theme.spacing(3),
           fontWeight:'bold',
           fontFamily:theme.typography.caption.fontFamily,
         },
