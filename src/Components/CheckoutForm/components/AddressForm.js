@@ -12,7 +12,7 @@ function AddressForm({next}) {
 
     return (
         <>
-            <Typography variant="h5" gutterButton >shopping address</Typography>   
+            <Typography variant="h5">shopping address</Typography>   
             <FormProvider {...methods}>
                 <form onSubmit={methods.handleSubmit(data => next({...data}))}>
                     <Grid container spacing={3}>

@@ -9,7 +9,7 @@ import { useSelector  } from 'react-redux';
 function CardTotal({countTotalProduct}) {
     const classes = useStyles();
     const {shopCartProducts} = useSelector((state) => state.cart);
-    const disableBtn = !shopCartProducts.length ? false : false ; 
+    const disableBtn = !shopCartProducts.length ? true : false ; 
     
     return (
         <Box className={classes.cartTotal} display='flex' flexDirection='column' justifyContent="center">
