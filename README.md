@@ -19,7 +19,7 @@ It is a work in progress. Any tips on how to better write the code, manage the f
 The future of this project: <br />
 
 * Create an authentication flow by useing firebase . 
-* create six pages (Home , About , login , register , shopping cart , our products , checkout ) .
+* create 7 pages (Home , About , login , register , shopping cart , our products , checkout ) .
 * you could make add product to  shopping cart  , it stores at loacal storage .  
 * you could filter products at our products page . 
 * you could make order and the order data post to firebase storge .  
